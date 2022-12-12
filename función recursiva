@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	num := 10
+	fmt.Printf("La sumatoria de los números impares hasta %d es: %d\n", num, sum(num))
+}
+
+func sum(num int) int {
+	//funcion base 
+	if num == 1 {
+		return num
+	} else {
+				//Suma num a lo que regrese la recursión de num-1
+		if num%2 == 1 {
+                                      //realizamos la suma de los impares 
+			return num + sum(num-1)
+		} else {
+                                     //retoena la respuesta  
+			return sum(num - 1)
+		}
+
+	}
+}
